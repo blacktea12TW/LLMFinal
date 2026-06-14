@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>歌手歌曲搜尋代理</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; background: #f7f7f7; }
+      .container { max-width: 900px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 3px 20px rgba(0,0,0,.08); }
+      h1 { margin-bottom: 0.5rem; }
+      label { display: block; margin-top: 1rem; font-weight: bold; }
+      input, select, textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px; margin-top: 0.5rem; font-size: 1rem; }
+      button { margin-top: 1rem; padding: 0.85rem 1.4rem; border: none; background: #0078d4; color: white; font-size: 1rem; border-radius: 6px; cursor: pointer; }
+      button:hover { background: #005a9e; }
+      .result { white-space: pre-wrap; background: #fafafa; border: 1px solid #ddd; padding: 1rem; border-radius: 8px; margin-top: 1rem; }
+      .error { color: #c00; margin-top: 1rem; }
+      .footer { margin-top: 2rem; color: #555; font-size: 0.95rem; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>歌手歌曲搜尋代理</h1>
+      <p>輸入歌手名稱，系統會自動從 MusicBrainz 搜尋歌曲資料，並由本地 AI 或 Google API 整理成繁體中文回答。</p>
+
+      <form method="post">
+        <label for="artist">歌手名稱</label>
+        <input id="artist" name="artist" type="text" value="{{ artist }}" placeholder="例如：周杰倫" required>
+
+        <button type="submit">搜尋</button>
+      </form>
+
+      {% if error %}
+      <div class="error">錯誤：{{ error }}</div>
+      {% endif %}
+
+      {% if result_text %}
+      <div class="result">{{ result_text }}</div>
+      {% endif %}
+
+      <div class="footer">
+        輸入歌手名稱後按下搜尋，系統會自動執行後端代理並回傳結果。
+      </div>
+    </div>
+  </body>
+</html>
