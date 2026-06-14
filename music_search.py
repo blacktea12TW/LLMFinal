@@ -11,7 +11,7 @@ WIKIPEDIA_ZH_URL = "https://zh.wikipedia.org/w/api.php"
 WIKIPEDIA_EN_URL = "https://en.wikipedia.org/w/api.php"
 
 # 提供合理的 User-Agent；MusicBrainz 與 MediaWiki 建議包含聯絡資訊。
-DEFAULT_USER_AGENT = "LocalMusicAgent/1.0 (contact: blacktea12ouo@gmail.com)"
+DEFAULT_USER_AGENT = "LocalMusicAgent/1.0 (contact: example@yourmail.com)"
 
 
 def _default_headers():

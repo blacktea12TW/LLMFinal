@@ -80,3 +80,8 @@ python web_app.py
 ## 建議
 - 如果搜尋歌手結果不精確，可嘗試使用完整藝名或中英文混合名稱。
 - 若要進一步擴充，可以加入 Spotify API、myMusic 等資料來源，或改善歌手資料清理邏輯。
+
+##DISCLAIMER
+- This whole thing was made by github copilot, expect some bugs.
+- this was done for my university course project, It is not commercial.
+- If there is any issue you are worried about, please contect me via my email  blacktea12ouo@gmail.com
